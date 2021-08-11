@@ -1,6 +1,8 @@
 * {
   padding: 0px;
   margin: 0px;
+  box-sizing: border-box;
+  font-size: 100%;
 }
 body {
   background-color: #0b0c10;
@@ -12,18 +14,25 @@ body {
   color: #66fcf1;
   text-decoration: underline;
 }
-
+.login-page {
+  height: 100vh;
+  position: relative;
+}
+.tab-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #66fcf1;
+  padding: 5rem 4rem;
+}
+.tab-content a {
+  color: #66fcf1;
+}
 form {
   color: #66fcf1;
-  border: 1px solid #45a29e;
-  padding: 50px 50px 30px 50px;
 }
 
-hr {
-  width: 200px;
-  margin: 0 auto;
-  border: 1px solid #66fcf1;
-}
 .btn-custom {
   background-color: #05386b;
   margin: 10px 0 0 0;
@@ -31,4 +40,53 @@ hr {
 .btn-custom:hover {
   background-color: #66fcf1;
   color: #05386b;
+}
+
+@media screen and (max-width: 425px) {
+  #header h2 {
+    font-size: 20px;
+  }
+  .navbar-toggle{
+    margin-right: 0px;
+    border: 1px solid black;
+  }
+  .bi-sliders{
+    color: white;
+    font-size: 20px;
+  }
+  .tab-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #66fcf1;
+    padding: 20px 10px;
+    font-size: 12px;
+    width: 300px;
+  }
+  .form-control,
+  .btn-custom,.custom-file {
+    font-size: 10px;
+  }
+  img{
+    max-width: 250px;
+    max-height: 250px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .tab-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #66fcf1;
+    padding: 20px 10px;
+    font-size: 12px;
+    width: 280px;
+  }
+  .form-control,
+  .btn-custom {
+    font-size: 10px;
+  }
 }

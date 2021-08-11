@@ -59,17 +59,25 @@ if (isset($_POST['submit'])){
 <?php require('includes/header.php') ?>
 
   <!-- header start -->
-  <div class="container" id="header">
-    <nav class="navbar navbar-expand-md py-4">
-      <h2>Student Registration Form</h2>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a href="login.php" class="nav-link border"> LogIn </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  <!-- header end -->
+    <div class="container" id="header">
+      <nav class="navbar navbar-expand-md py-4">
+        <h2>Student Database Management System</h2>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#demo">
+          <i class="bi bi-sliders"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="demo">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link disabled">Admin</a>
+            </li>
+            <li class="nav-item">
+              <a href="logout.php" class="nav-link">Back</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- header end -->
 
   <!-- Student Detail Form Start -->
   <div class="container">

@@ -59,14 +59,19 @@ if (isset($_POST['update'])){
     <div class="container" id="header">
       <nav class="navbar navbar-expand-md py-4">
         <h2>Student Database Management System</h2>
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a href="#" class="nav-link mx-4 disabled"><?php echo $_SESSION['name'] ?></a>
-          </li>
-          <li class="nav-item">
-            <a href="logout.php" class="nav-link border">LogOut</a>
-          </li>
-        </ul>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#demo">
+          <i class="bi bi-sliders"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="demo">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link disabled"><?php echo $_SESSION['name'] ?></a>
+            </li>
+            <li class="nav-item">
+              <a href="logout.php" class="nav-link">LogOut</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
     <!-- header end -->

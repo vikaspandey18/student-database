@@ -28,14 +28,22 @@ if(isset($_POST['delete'])){
     <div class="container" id="header">
       <nav class="navbar navbar-expand-md py-4">
         <h2>Student Database Management System</h2>
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a href="#" class="nav-link mx-4 disabled"><?php echo $_SESSION['name'] ?></a>
-          </li>
-          <li class="nav-item">
-            <a href="logout.php" class="nav-link border">LogOut</a>
-          </li>
-        </ul>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#demo">
+          <i class="bi bi-sliders"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="demo">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link disabled"><?php echo $_SESSION['name'] ?></a>
+            </li>
+            <li class="nav-item">
+              <a href="student.php" class="nav-link">Display All Student</a>
+            </li>
+            <li class="nav-item">
+              <a href="logout.php" class="nav-link">LogOut</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
     <!-- header end -->
@@ -161,17 +169,8 @@ if(isset($_POST['delete'])){
                     <textarea name="address" id="" class="form-control" cols="20" rows="5" placeholder="Address" readonly><?php echo $row['address']?></textarea>
                   </div>
                   <label>Image Of Student</label>
-                    <div class="form-group mb-3">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFile" name="filename">
-                        <label for="customeFile" class="custom-file-label">Choose Student Image</label>
-                      </div>
-                      
-                    </div>
                   <div class="form-group">
-                    <div>
                       <img src="<?php echo $row['image']?>" width="300" height="300" class="d-block m-auto" alt="Image of Student">
-                    </div>
                   </div>
                   <div class="form-group pt-5 d-flex justify-content-around">
                     <a href="edit.php?id=<?php echo $row['id'];?>" class="btn btn-primary btn-custom">Update</a>

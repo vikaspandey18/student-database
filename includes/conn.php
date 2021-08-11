@@ -7,5 +7,5 @@
 
 //Database to Work with online Server
 
-$conn = mysqli_connect('remotemysql.com', 'WTduVtypQq', 'qZwpt1Z3JF','WTduVtypQq') or die("Unable To Connect To Database");
+$conn = mysqli_connect('remotemysql.com', 'JDqRm8jUSF', 'v0MhjHbmwZ','JDqRm8jUSF') or die("Unable To Connect To Database");
 ?>
